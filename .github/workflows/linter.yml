@@ -16,11 +16,19 @@ jobs:
         with:
           python-version: 3.12
 
+      # - name: Install uv
+      #   run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      # - name: Add uv to PATH
+      #   run: echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      # - name: Install dependencies
+      #   run: uv sync --group dev
+
       - name: Check __init__.py in folders
-        run: python check_init_files.py
+        run: uv run python check_init_files.py
 
       - name: Run Linter
         run: |
-          pip3 install -U -r .devcontainer/requirements.dev.txt
-          pip3 install -U -r .devcontainer/requirements.txt
-          find . -name '*.py' -print | xargs pylint
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv run find . -name '*.py' -not -path './.venv/*' -print | xargs uv run pylint

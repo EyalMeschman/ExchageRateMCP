@@ -1,6 +1,9 @@
 {
 	"name": "McpServer",
-	"dockerFile": "Dockerfile",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
