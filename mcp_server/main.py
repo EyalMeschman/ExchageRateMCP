@@ -1,7 +1,6 @@
 import os
 from mcp.server.fastmcp import FastMCP
 
-# Create an MCP server
 mcp = FastMCP("AI Sticky Notes")
 
 NOTES_FILE = os.path.join(os.path.dirname(__file__), "notes.txt")
@@ -51,7 +50,7 @@ def get_latest_note() -> str:
     Get the most recently added note from the sticky note file.
 
     Returns:
-        str: The last note entry. If no notes exist, a default message is returned.
+        str: The last note entry. If no notes exist, a default message is returned. str: The last note entry. If no notes exist, a default message is returned. str: The last note entry. If no notes exist, a default message is returned.
     """
     ensure_file()
     with open(NOTES_FILE, "r", encoding="utf-8") as f:
