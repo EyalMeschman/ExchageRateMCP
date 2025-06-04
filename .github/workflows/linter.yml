@@ -19,12 +19,6 @@ jobs:
       - name: Install uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      # - name: Add uv to PATH
-      #   run: echo "$HOME/.local/bin" >> $GITHUB_PATH
-
-      # - name: Install dependencies
-      #   run: uv sync --group dev
-
       - name: Check __init__.py in folders
         run: uv run python check_init_files.py
 
