@@ -1,5 +1,5 @@
 # McpServer Development Container
-FROM mcr.microsoft.com/devcontainers/python:3.12.10
+FROM mcr.microsoft.com/devcontainers/python:3.12
 
 # Install Python development dependencies
 COPY requirements.dev.txt /tmp/requirements.dev.txt
