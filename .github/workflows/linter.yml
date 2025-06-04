@@ -1,0 +1,26 @@
+name: linter
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  linter:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.10.12
+
+      - name: Check __init__.py in folders
+        run: python check_init_files.py
+
+      - name: Run Linter
+        run: |
+          pip3 install -U -r .devcontainer/requirements.dev.txt
+          pip3 install -U -r .devcontainer/requirements.txt
+          find . -name '*.py' -print | xargs pylint

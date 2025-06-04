@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug McpServer",
+            "type": "debugpy", // or "debugpy" if you prefer; both accept "module"
+            "request": "launch",
+            // ───── run the package member instead of a loose script ─────
+            "module": "mcp_server.main",
+            // where to launch the process (optional if it's already the workspace root)
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            // the CLI args your script expects
+            "args": [
+                "-f",
+                "Canva_8.pdf"
+            ]
+        }
+    ]
+}

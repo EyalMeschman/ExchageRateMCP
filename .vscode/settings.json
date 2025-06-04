@@ -1,0 +1,43 @@
+{
+    "editor.renderWhitespace": "trailing",
+    "editor.scrollBeyondLastLine": false,
+    "editor.minimap.enabled": true,
+    "editor.trimAutoWhitespace": true,
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": [
+        "mcp_server",
+    ],
+    "pylint.args": [
+        "--init-hook",
+        "import sys; sys.path.insert(0, './')",
+    ],
+    "python.testing.pytestArgs": [
+        "mcp_server"
+    ],
+    "pylint.severity": {
+        "refactor": "Warning",
+    },
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "remote.localPortHost": "allInterfaces",
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        ".pytest_cache": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+    },
+    "remote.autoForwardPortsFallback": 0
+}
