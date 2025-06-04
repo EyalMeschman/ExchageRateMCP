@@ -1,7 +1,6 @@
 import os
 from mcp.server.fastmcp import FastMCP
 
-# Create an MCP server
 mcp = FastMCP("AI Sticky Notes")
 
 NOTES_FILE = os.path.join(os.path.dirname(__file__), "notes.txt")

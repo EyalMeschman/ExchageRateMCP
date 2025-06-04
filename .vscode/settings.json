@@ -15,6 +15,7 @@
         "black"
     ],
     "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "./.venv/bin/python",
     "python.analysis.extraPaths": [
         "mcp_server",
     ],
